@@ -1,8 +1,8 @@
 <template>
   <div
-    class="bg-[#8324DB] bg-opacity-10 w-full h-[100vh] flex justify-between pl-12 p-24 rounded-tr-[180px]"
+    class="bg-[#8324DB] bg-opacity-10 w-full h-[110vh] md:flex justify-between pl-14 pt-18 p-24 rounded-tr-[180px]"
   >
-    <div class="w-[65%]">
+    <div class="md:w-[70%]">
       <h1 class="font-bold text-[64px] pb-3">
         Have
         <span class="text-[#AC6CE7] leading-[80px] tracking-normal">fun</span>
@@ -18,7 +18,7 @@
         <img :src="playStore" alt="Play Store" class="w-40 h-auto ml-4" />
       </div>
     </div>
-    <div class="w-[25%]">
+    <div class="md:w-[25%]">
       <img :src="heroimg" alt="Hero Image" class="w-full h-auto" />
     </div>
   </div>
