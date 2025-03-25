@@ -1,10 +1,10 @@
 <template>
-  <div class="w-full h-screen pt-10 pr-24 pb-10 pl-24">
+  <div class="w-full h-[110vh] pt-10 pr-24 pb-10 pl-24">
     <div class="flex items-center justify-center">
       <h1
         class="font-normal text-[16px] leading-[24px] text-center p-[10px] mb-6 border-[2px] rounded-[21px] shadow-lg"
       >
-        Your Heading Here
+        Our Features
       </h1>
     </div>
     <div class="flex w-full space-x-20">
