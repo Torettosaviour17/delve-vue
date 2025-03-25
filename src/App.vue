@@ -5,7 +5,8 @@
     <Herosection />
     <MajorLanguages />
     <OurFeature />
-    
+    <OurFeature0 />
+
     <!-- Router View: This will display the active route component -->
     <router-view />
   </div>
@@ -14,9 +15,10 @@
 <script>
 // Importing the Navbar component
 import Navbar from './components/layout/navbar.vue';
-import Herosection from './components/homecomponents/Herosection.vue';	
+import Herosection from './components/homecomponents/Herosection.vue';
 import MajorLanguages from './components/homecomponents/MajorLanguages.vue';
 import OurFeature from './components/homecomponents/OurFeature.vue';
+import OurFeature0  from './components/homecomponents/OurFeature0.vue';
 
 export default {
   name: 'App',
@@ -25,6 +27,7 @@ export default {
     Herosection,
     MajorLanguages,
     OurFeature,
+    OurFeature0,
 
   },
 };
