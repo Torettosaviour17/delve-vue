@@ -6,6 +6,7 @@
     <MajorLanguages />
     <OurFeature />
     <OurFeature0 />
+    <ExperienceDelve />
 
     <!-- Router View: This will display the active route component -->
     <router-view />
@@ -18,7 +19,8 @@ import Navbar from './components/layout/navbar.vue';
 import Herosection from './components/homecomponents/Herosection.vue';
 import MajorLanguages from './components/homecomponents/MajorLanguages.vue';
 import OurFeature from './components/homecomponents/OurFeature.vue';
-import OurFeature0  from './components/homecomponents/OurFeature0.vue';
+import OurFeature0 from './components/homecomponents/OurFeature0.vue';
+import ExperienceDelve from './components/homecomponents/ExperienceDelve.vue';
 
 export default {
   name: 'App',
@@ -28,6 +30,7 @@ export default {
     MajorLanguages,
     OurFeature,
     OurFeature0,
+    ExperienceDelve,
 
   },
 };
