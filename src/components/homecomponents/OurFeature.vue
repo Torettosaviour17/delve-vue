@@ -2,35 +2,96 @@
   <div class="w-full h-screen pt-10 pr-24 pb-10 pl-24">
     <div class="flex items-center justify-center">
       <h1
-        class="font-normal text-[16px] leading-[24px] tracking-normal text-center p-[10px] mb-6 border-[2px] rounded-[21px] shadow-lg"
+        class="font-normal text-[16px] leading-[24px] text-center p-[10px] mb-6 border-[2px] rounded-[21px] shadow-lg"
       >
         Your Heading Here
       </h1>
     </div>
-    <div class="flex w-full">
+    <div class="flex w-full space-x-20">
       <div class="w-[50%] space-y-6">
-        <h1 class="font-bold text-[48px] leading-[120%] tracking-normal">
+        <h1 class="font-bold text-[48px] leading-[120%]">
           What we have to offer
         </h1>
-        <p
-          class="font-medium text-[18px] leading-[150%] text-[#615F5F] tracking-normal"
-        >
+        <p class="font-medium text-[18px] leading-[150%] pr-32 text-[#615F5F]">
           Access your quests, participate in challenges, and keep up with your
           learning right from your mobile device.
         </p>
 
-        <img src="" alt="" />
+        <div class="w-full flex items-end justify-center p-5">
+          <img :src="featureimg" alt="featureimg" />
+        </div>
       </div>
-      <div>
-        <div></div>
-        <div></div>
-        <div></div>
+      <div class="pb-16 w-[50%] space-y-6 mt-16">
+        <div
+          class="bg-[#F4EDF6] rounded-[19.84px] p-6 flex items-start space-x-4"
+        >
+          <img
+            :src="puzzle"
+            alt="🧩"
+            class="w-[50px] h-[50px] p-2 rounded-full bg-[#D5B5F3]"
+          />
+          <div>
+            <h1 class="font-inter font-semibold text-[24px] leading-[140%]">
+              Word matching
+            </h1>
+            <p class="text-[18px] leading-[150%] text-[#615F5F] font-normal">
+              Pairing words with their correct meanings, synonyms, or
+              translations.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="bg-[#F4EDF6] rounded-[19.84px] p-6 flex items-start space-x-4"
+        >
+          <img
+            :src="questImg"
+            alt="quest"
+            class="w-[50px] h-[50px] p-2 rounded-full bg-[#D5B5F3]"
+          />
+          <div>
+            <h1 class="font-inter font-semibold text-[24px] leading-[140%]">
+              Quest-Based Learning
+            </h1>
+            <p class="text-[18px] leading-[150%] text-[#615F5F] font-normal">
+              Complete real-life challenges like booking a hotel to improve
+              fluency.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="bg-[#F4EDF6] rounded-[19.84px] p-6 flex items-start space-x-4"
+        >
+          <img
+            :src="voiceImg"
+            alt="voice"
+            class="w-[50px] h-[50px] p-2 rounded-full bg-[#D5B5F3]"
+          />
+          <div>
+            <h1 class="font-inter font-semibold text-[24px] leading-[140%]">
+              Voice Training
+            </h1>
+            <p class="text-[18px] leading-[150%] text-[#615F5F] font-normal">
+              Speak like a native in no time with our voice training exercises.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
+
 <script>
 export default {
   name: "OurFeature",
+  data() {
+    return {
+      featureimg: "/featureimg.png",
+      puzzle: "/puzzle.png",
+      questImg: "/quest.png",
+      voiceImg: "/voiceImg.png",
+    };
+  },
 };
 </script>
