@@ -8,6 +8,7 @@
     <OurFeature0 />
     <ExperienceDelve />
     <Subscribe />
+    <Footer />
 
     <!-- Router View: This will display the active route component -->
     <router-view />
@@ -23,6 +24,7 @@ import OurFeature from "./components/homecomponents/OurFeature.vue";
 import OurFeature0 from "./components/homecomponents/OurFeature0.vue";
 import ExperienceDelve from "./components/homecomponents/ExperienceDelve.vue";
 import Subscribe from "./components/homecomponents/Subscribe.vue";
+import Footer from "./components/layout/footer.vue";
 
 export default {
   name: "App",
@@ -34,6 +36,7 @@ export default {
     OurFeature0,
     ExperienceDelve,
     Subscribe,
+    Footer,
   },
 };
 </script>
