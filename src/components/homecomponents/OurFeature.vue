@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full md:h-[110vh] pt-10 p-10 md:pr-24 md:pb-10 md:pl-24">
+  <div class="w-full pt-10 p-10 md:pr-24 md:pb-6 md:pl-24">
     <div class="flex items-center justify-center">
       <h1
         class="font-normal text-[16px] leading-[24px] text-center p-[10px] mb-6 border-[2px] rounded-[21px] shadow-lg"
@@ -11,7 +11,9 @@
       class="flex flex-col-reverse md:flex-row w-full space-y-6 md:space-x-20 justify-between"
     >
       <div class="w-full md:w-[50%] space-y-6 text-center md:text-left">
-        <h1 class="font-bold text-[48px] leading-[120%]">
+        <h1
+          class="font-bold text-[30px] sm:text-[38px] md:text-[40px] lg:text-[48px] leading-[120%]"
+        >
           What we have to offer
         </h1>
         <p
