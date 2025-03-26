@@ -1,25 +1,45 @@
 <template>
   <div
-    class="bg-[#8324DB] bg-opacity-10 w-full h-[110vh] md:flex justify-between pl-14 pt-18 p-24 rounded-tr-[180px]"
+    class="bg-[#8324DB] bg-opacity-10 w-full h-auto md:h-[110vh] flex flex-col-reverse md:flex-row md:justify-between px-6 sm:px-14 py-10 md:p-24 rounded-tr-[100px] sm:rounded-tr-[180px]"
   >
-    <div class="md:w-[70%]">
-      <h1 class="font-bold text-[64px] pb-3">
+    <div class="w-full md:w-[70%] text-center md:text-left">
+      <h1 class="font-bold text-[36px] sm:text-[48px] md:text-[64px] pb-3">
         Have
-        <span class="text-[#AC6CE7] leading-[80px] tracking-normal">fun</span>
+        <span
+          class="text-[#AC6CE7] leading-[120%] sm:leading-[80px] tracking-normal"
+          >fun</span
+        >
         learning a language while you <span class="text-[#AC6CE7]">Travel</span>
       </h1>
-      <p class="font-light text-[#1B1B1B] text-[24px] leading-[100%]">
+      <p
+        class="font-light text-[#1B1B1B] text-[18px] sm:text-[24px] leading-[140%]"
+      >
         Embark on exciting quests, conquer daily challenges from anywhere in the
-        world to help you answer confidently in your language of choice any
+        world to help you answer confidently in your language of choice in any
         situation.
       </p>
-      <div class="flex pt-7 items-start">
-        <img :src="appleStore" alt="Apple Store" class="w-40 h-auto" />
-        <img :src="playStore" alt="Play Store" class="w-40 h-auto ml-4" />
+
+      <div
+        class="flex flex-col sm:flex-row items-center justify-center md:justify-start sm:items-start pt-7 gap-4"
+      >
+        <img
+          :src="appleStore"
+          alt="Apple Store"
+          class="w-[50%] sm:w-[40%] md:w-[30%] max-w-[140px] h-auto"
+        />
+        <img
+          :src="playStore"
+          alt="Play Store"
+          class="w-[50%] sm:w-[40%] md:w-[30%] max-w-[140px] h-auto"
+        />
       </div>
     </div>
-    <div class="md:w-[25%]">
-      <img :src="heroimg" alt="Hero Image" class="w-full h-auto" />
+    <div class="w-full md:w-[25%] flex justify-center">
+      <img
+        :src="heroimg"
+        alt="Hero Image"
+        class="w-[200px] max-w-[350px] md:max-w-none h-auto"
+      />
     </div>
   </div>
 </template>
