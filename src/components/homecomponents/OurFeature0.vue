@@ -1,10 +1,41 @@
 <script setup>
-import { PlusIcon } from "@heroicons/vue/24/solid";
-import { MinusIcon } from "@heroicons/vue/24/solid";
+import { ref } from "vue";
+import { PlusIcon, MinusIcon } from "@heroicons/vue/24/solid";
+
+// FAQ Data (stored in an array)
+const faqs = ref([
+  {
+    question: "Is Delve available in flight mode?",
+    answer:
+      "Currently, Delve requires an internet connection to access all features.",
+    isOpen: false,
+  },
+  {
+    question: "Can I switch languages when I learn with Delve?",
+    answer:
+      "We offer a variety of languages, including Spanish, French, German, Japanese, and more. We continuously add new languages based on user demand.",
+    isOpen: false,
+  },
+  {
+    question: "Can I adjust my learning goals?",
+    answer:
+      "Yes! Delve allows you to customize your learning experience based on your schedule and goals.",
+    isOpen: false,
+  },
+]);
+
+// Toggle function to open one at a time
+const toggleFAQ = (index) => {
+  faqs.value.forEach((faq, i) => {
+    faq.isOpen = i === index ? !faq.isOpen : false;
+  });
+};
 </script>
 
 <template>
-  <div class="w-full h-[85vh] pt-20 bg-[#F9F9F9] pr-20 pb-10 pl-16">
+  <div
+    class="w-full h-auto md:h-screen pt-20 bg-[#F9F9F9] px-6 md:px-16 lg:px-20 pb-10 md:pb-0"
+  >
     <div class="flex items-center justify-center">
       <h1
         class="font-normal text-[16px] leading-[24px] text-center p-[10px] mb-6 border-[2px] rounded-[21px] shadow-lg"
@@ -12,61 +43,52 @@ import { MinusIcon } from "@heroicons/vue/24/solid";
         Our Features
       </h1>
     </div>
-    <div class="flex w-full space-x-16">
-      <div class="w-[40%]">
-        <h1 class="font-bold pt-12 pb-4 text-[32px] leading-[120%]">
-          Got Questions About Delve ?
+
+    <!-- Layout Wrapper -->
+    <div class="flex flex-col md:flex-row w-full md:space-x-16">
+      <!-- Left Section -->
+      <div class="w-full md:w-[40%] text-left mb-10">
+        <h1
+          class="font-bold pt-6 md:pt-12 pb-4 text-[24px] md:text-[32px] leading-[120%]"
+        >
+          Got Questions About Delve?
         </h1>
-        <p class="font-medium text-[18px] leading-[150%] pr-32 text-[#615F5F]">
-          No worries, we’ve got you covered
+        <p
+          class="font-medium text-[16px] md:text-[18px] leading-[150%] text-[#615F5F]"
+        >
+          No worries, we’ve got you covered.
         </p>
       </div>
-      <div class="w-[60%] space-y-6">
-        <div
-          class="flex justify-between w-full items-center p-4 bg-[#FFFFFF] rounded-[12px]"
-        >
-          <h5 class="font-semibold text-[20px] leading-[42px] tracking-normal">
-            Is Delve available in flight mode?
-          </h5>
-          <PlusIcon class="w-7 h-7 text-black cursor-pointer" />
-        </div>
-        <div class="p-4 bg-[#F3E9FB] rounded-[16px]">
+
+      <!-- Right Section (FAQs) -->
+      <div class="w-full md:w-[60%] space-y-4 md:space-y-6">
+        <div v-for="(faq, index) in faqs" :key="index">
+          <!-- Question -->
           <div
-            class="flex justify-between w-full items-center px-0 p-4 rounded-[12px]"
+            @click="toggleFAQ(index)"
+            class="flex justify-between w-full items-center p-4 bg-[#FFFFFF] rounded-[12px] cursor-pointer"
           >
             <h5
-              class="font-semibold text-[20px] leading-[42px] tracking-normal"
+              class="font-semibold text-[18px] md:text-[20px] leading-[32px] md:leading-[42px]"
             >
-              Can I switch languages when I learn with Delve?
+              {{ faq.question }}
             </h5>
-            <MinusIcon class="w-7 h-7 text-gray-black cursor-pointer" />
+            <component
+              :is="faq.isOpen ? MinusIcon : PlusIcon"
+              class="w-6 md:w-7 h-6 md:h-7 text-black cursor-pointer"
+            />
           </div>
-          <div>
+
+          <!-- Answer (only visible when open) -->
+          <div v-if="faq.isOpen" class="p-4 bg-[#F3E9FB] rounded-[16px]">
             <p
-              class="font-['Open_Sans'] font-normal text-[#555555] text-[16px] leading-[32px] tracking-[0%]"
+              class="font-['Open_Sans'] font-normal text-[#555555] text-[14px] md:text-[16px] leading-[28px] md:leading-[32px]"
             >
-              We offer a variety of languages, including Spanish, French,
-              German, Japanese, and more. We continuously add new languages
-              based on user demand.re.
+              {{ faq.answer }}
             </p>
           </div>
-        </div>
-        <div
-          class="flex justify-between w-full items-center p-4 bg-[#FFFFFF] rounded-[12px]"
-        >
-          <h5 class="font-semibold text-[20px] leading-[42px] tracking-normal">
-            Can I adjust my learning goals?
-          </h5>
-          <PlusIcon class="w-7 h-7 text-black cursor-pointer" />
         </div>
       </div>
     </div>
   </div>
 </template>
-<script>
-// import { PlusIcon } from "@heroicons/vue/24/solid";
-
-export default {
-  name: "OurFeature0",
-};
-</script>
