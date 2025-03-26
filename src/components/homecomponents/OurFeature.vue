@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-[110vh] pt-10 pr-24 pb-10 pl-24">
+  <div class="w-full md:h-[110vh] pt-10 p-10 md:pr-24 md:pb-10 md:pl-24">
     <div class="flex items-center justify-center">
       <h1
         class="font-normal text-[16px] leading-[24px] text-center p-[10px] mb-6 border-[2px] rounded-[21px] shadow-lg"
@@ -7,21 +7,26 @@
         Our Features
       </h1>
     </div>
-    <div class="flex w-full space-x-20">
-      <div class="w-[50%] space-y-6">
+    <div
+      class="flex flex-col-reverse md:flex-row w-full space-y-6 md:space-x-20 justify-between"
+    >
+      <div class="w-full md:w-[50%] space-y-6 text-center md:text-left">
         <h1 class="font-bold text-[48px] leading-[120%]">
           What we have to offer
         </h1>
-        <p class="font-medium text-[18px] leading-[150%] pr-32 text-[#615F5F]">
+        <p
+          class="font-medium text-[18px] leading-[150%] md:pr-32 text-[#615F5F]"
+        >
           Access your quests, participate in challenges, and keep up with your
           learning right from your mobile device.
         </p>
 
-        <div class="w-full flex items-end justify-center p-5">
+        <div class="w-full flex items-center justify-center p-5">
           <img :src="featureimg" alt="featureimg" />
         </div>
       </div>
-      <div class="pb-16 w-[50%] space-y-6 mt-16">
+      <div class="pb-16 w-full md:w-[50%] space-y-6 mt-16">
+        <!-- Word Matching Section -->
         <div
           class="bg-[#F4EDF6] rounded-[19.84px] p-6 flex items-start space-x-4"
         >
@@ -41,6 +46,7 @@
           </div>
         </div>
 
+        <!-- Quest-Based Learning Section -->
         <div
           class="bg-[#F4EDF6] rounded-[19.84px] p-6 flex items-start space-x-4"
         >
@@ -60,6 +66,7 @@
           </div>
         </div>
 
+        <!-- Voice Training Section -->
         <div
           class="bg-[#F4EDF6] rounded-[19.84px] p-6 flex items-start space-x-4"
         >
