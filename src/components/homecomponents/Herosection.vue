@@ -3,7 +3,9 @@
     class="bg-[#8324DB] bg-opacity-10 w-full h-auto md:h-[110vh] flex flex-col-reverse md:flex-row md:justify-between px-6 sm:px-14 py-10 md:p-24 rounded-tr-[100px] sm:rounded-tr-[180px]"
   >
     <div class="w-full md:w-[70%] text-center md:text-left">
-      <h1 class="font-bold text-[36px] sm:text-[48px] md:text-[64px] pb-3">
+      <h1
+        class="font-bold text-[36px] sm:text-[48px] md:text-[42px] lg:text-[64px] pb-3"
+      >
         Have
         <span
           class="text-[#AC6CE7] leading-[120%] sm:leading-[80px] tracking-normal"
@@ -35,11 +37,7 @@
       </div>
     </div>
     <div class="w-full md:w-[25%] flex justify-center">
-      <img
-        :src="heroimg"
-        alt="Hero Image"
-        class="w-[200px] max-w-[350px] md:max-w-none h-auto"
-      />
+      <img :src="heroimg" alt="Hero Image" class="w-[200px] md:w-auto h-auto" />
     </div>
   </div>
 </template>
