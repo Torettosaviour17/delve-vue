@@ -33,9 +33,7 @@ const toggleFAQ = (index) => {
 </script>
 
 <template>
-  <div
-    class="w-full h-auto md:h-screen pt-20 bg-[#F9F9F9] px-6 md:px-16 lg:px-20 pb-10 md:pb-0"
-  >
+  <div class="w-full h-auto pt-20 bg-[#F9F9F9] px-6 md:px-16 lg:px-20 pb-10">
     <div class="flex items-center justify-center">
       <h1
         class="font-normal text-[16px] leading-[24px] text-center p-[10px] mb-6 border-[2px] rounded-[21px] shadow-lg"

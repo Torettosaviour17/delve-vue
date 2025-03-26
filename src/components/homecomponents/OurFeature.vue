@@ -11,7 +11,9 @@
       class="flex flex-col-reverse md:flex-row w-full space-y-6 md:space-x-20 justify-between"
     >
       <div class="w-full md:w-[50%] space-y-6 text-center md:text-left">
-        <h1 class="font-bold text-[48px] leading-[120%]">
+        <h1
+          class="font-bold text-[30px] sm:text-[38px] md:text-[40px] lg:text-[48px] leading-[120%]"
+        >
           What we have to offer
         </h1>
         <p
