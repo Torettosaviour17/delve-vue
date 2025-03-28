@@ -1,5 +1,5 @@
 <template>
-  <div class="text-white w-full h-[60vh] bg-[#481478] pt-20">
+  <div class="text-white w-full h-[50vh] bg-[#481478] pt-20">
     <div class="flex w-full">
       <div class="p-6 pl-14 pt-1 rounded-lg text-center w-[25%]">
         <div class="flex flex-col items-center">
@@ -117,7 +117,7 @@
         </div>
       </div>
 
-      <div class="p-6 pt-0 rounded-lg max-w-md mx-auto w-[23%]">
+      <div class="p-6 pt-0 rounded-lg max-w-md mx-auto w-[23%] hidden md:block">
         <label
           for="email"
           class="block font-sans font-bold text-[16px] leading-[100%] text-white mb-3"
@@ -142,7 +142,7 @@
       </div>
     </div>
     <div class="flex flex-col justify-center items-center w-full">
-        <div class="border-t border-white mt-16 mb-8 w-[92%]"></div>
+      <div class="border-t border-white mt-16 mb-8 w-[92%]"></div>
     </div>
     <div class="container mx-auto flex justify-between items-center px-4">
       <!-- Social Icons -->
