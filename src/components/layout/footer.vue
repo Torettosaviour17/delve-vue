@@ -1,5 +1,5 @@
 <template>
-  <div class="text-white w-full h-[50vh] bg-[#481478] pt-20">
+  <div class="text-white w-full bg-[#481478] pt-20">
     <div class="flex w-full">
       <div class="p-6 pl-14 pt-1 rounded-lg text-center w-[25%]">
         <div class="flex flex-col items-center">
@@ -144,9 +144,11 @@
     <div class="flex flex-col justify-center items-center w-full">
       <div class="border-t border-white mt-16 mb-8 w-[92%]"></div>
     </div>
-    <div class="container mx-auto flex justify-between items-center px-4">
+    <div
+      class="container mx-auto md:flex justify-between items-center px-4 text-center"
+    >
       <!-- Social Icons -->
-      <div class="flex space-x-4">
+      <div class="md:flex space-x-4 hidden">
         <font-awesome-icon
           :icon="['fab', 'tiktok']"
           class="text-white text-xl"
