@@ -1,11 +1,11 @@
 <template>
   <div class="text-white w-full bg-[#481478] pt-20">
-    <div class="flex w-full">
-      <div class="p-6 pl-14 pt-1 rounded-lg text-center w-[25%]">
+    <div class="md:flex w-full">
+      <div class="p-6 md:pl-14 pt-1 rounded-lg text-center md:w-[25%]">
         <div class="flex flex-col items-center">
           <img :src="footerlogo" alt="Delve Logo" class="" />
         </div>
-        <div class="flex gap-4 mt-4">
+        <div class="flex justify-center md:justify-start items-center w-full gap-4 mt-4">
           <button
             class="bg-[#8324DB] text-white flex items-center gap-2 px-4 py-2 rounded-lg shadow-md"
           >
@@ -22,9 +22,9 @@
       </div>
 
       <div
-        class="max-w-6xl text-white mx-auto grid grid-cols-10 gap- pt-8 w-[50%]"
+        class="max-w-6xl text-white mx-auto grid lg:grid-cols-10 gap- pt-8 md:w-[50%]"
       >
-        <div class="col-start-2 col-end-3">
+        <div class="col-start-2 col-end-3 hidden lg:block">
           <h3
             class="font-sans font-semibold text-[16px] leading-[100%] mb-[20px]"
           >
@@ -43,7 +43,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-start-3 col-end-6">
+        <div class="md:col-start-3 md:col-end-6 hidden lg:block ">
           <h3
             class="font-sans font-semibold text-[16px] leading-[100%] mb-[20px]"
           >
@@ -117,7 +117,7 @@
         </div>
       </div>
 
-      <div class="p-6 pt-0 rounded-lg max-w-md mx-auto w-[23%] hidden md:block">
+      <div class="p-6 pt-0 rounded-lg max-w-md mx-auto md:w-[23%] hidden lg:block">
         <label
           for="email"
           class="block font-sans font-bold text-[16px] leading-[100%] text-white mb-3"
